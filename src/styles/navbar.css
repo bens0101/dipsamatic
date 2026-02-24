@@ -1,0 +1,141 @@
+.navbar {
+  width: 100%;
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 42px;
+  object-fit: contain;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 45px;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold);
+}
+
+/* CTA Button */
+.cta {
+  padding: 10px 26px;
+  border-radius: 15px;
+  border: 2px solid var(--gold);
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.cta:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+.hamburger {
+  width: 32px;
+  height: 24px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background: var(--white);
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Animated hamburger */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+/* Mobile menu hidden by default */
+.mobile-menu {
+  position: fixed;
+  top: 75px;
+  right: -100%;
+  width: 75%;
+  height: calc(100vh - 75px);
+  background: #000;
+  padding: 40px 25px;
+  transition: 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.mobile-menu.show {
+  right: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.mobile-menu a {
+  color: var(--white);
+  font-size: 20px;
+}
+
+.mobile-menu a.active,
+.mobile-menu a:hover {
+  color: var(--gold);
+}
+
+.mobile-btn {
+  width: 100%;
+}
+
+/* Hide desktop items on mobile */
+@media (max-width: 900px) {
+  .nav-links,
+  .cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

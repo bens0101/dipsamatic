@@ -1,0 +1,168 @@
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
+
+/* ================= BANNER SECTION ================= */
+.contact-banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.banner-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(11, 11, 11, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.banner-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 2rem;
+  object-fit: contain;
+}
+
+.banner-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--gold);
+}
+
+.banner-description {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ================= CONTACT INFO SECTION ================= */
+.contact-info-section {
+  background: var(--black);
+  padding: 80px 0;
+}
+
+.contact-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.contact-details h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--gold);
+}
+
+.contact-details p {
+  font-size: 1rem;
+  opacity: 0.85;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 768px) {
+  .contact-banner {
+    height: 50vh;
+    min-height: 350px;
+  }
+  
+  .banner-logo {
+    width: 80px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .banner-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .banner-description {
+    font-size: 1.1rem;
+  }
+  
+  .contact-info-section {
+    padding: 60px 0;
+  }
+  
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .contact-item {
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-title {
+    font-size: 2rem;
+  }
+  
+  .banner-description {
+    font-size: 1rem;
+  }
+  
+  .contact-details h3 {
+    font-size: 1.2rem;
+  }
+  
+  .contact-details p {
+    font-size: 0.95rem;
+  }
+}
