@@ -62,7 +62,7 @@
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 3rem;
   opacity: 0.9;
@@ -276,12 +276,12 @@
   gap: 24px;
 }
 
-/* vertical gold line now grouped with text */
+/* vertical gold line grouped with text */
 .products-line {
   width: 26px;
   height: 200px;
   object-fit: cover;
-  order: -1; /* places line before text */
+  order: -1;
 }
 
 .products-text {
@@ -306,6 +306,112 @@
 
 .italy-flag {
   width: 240px;
+}
+
+/* =========================================
+   NOUVEAUTÉS SECTION
+   ========================================= */
+
+.news-section {
+  padding: 80px 0 120px;
+  color: #fff;
+}
+
+.news-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* rows */
+.news-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.news-col {
+  flex: 1;
+}
+
+/* TAKE-IT: text + gold line (same logic as Produits Naturel) */
+.news-text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+
+.news-line {
+  width: 26px;
+  height: 200px;
+  object-fit: cover;
+  order: -1;
+}
+
+.news-text {
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* BUNA offer badge positioned inside text */
+.buna-offer {
+  width: 190px;
+  align-self: flex-end;
+}
+
+/* image cards */
+.news-col-image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.news-image-card {
+  border-radius: 24px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 430px;
+}
+
+.news-image-card img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
+.news-item-title {
+    font-size: 2rem;
+}
+
+.news-item-description {
+    font-size: 1.6rem;
+}
+
+/* ------- BUNA row layout ------- */
+
+.buna-row {
+  align-items: center;
+}
+
+.buna-main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.buna-offer-col {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buna-offer {
+  width: 190px;
 }
 
 /* =========================================
@@ -334,10 +440,33 @@
   .products-text-wrapper {
     flex-direction: column;
   }
+  .products-text {
+    padding-top: 4rem;
+  }
+
+  /* stack news rows */
+  .news-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .news-col-image {
+    justify-content: center;
+  }
+
+  .buna-main {
+    align-items: center;
+  }
+
+  .buna-offer-col {
+    justify-content: center;
+  }
 
   /* hide vertical lines on mobile */
   .expertise-line,
-  .products-line {
+  .products-line,
+  .news-line {
     display: none;
   }
 
@@ -381,5 +510,140 @@
   .feature-icon {
     width: 65px;
     height: 65px;
+  }
+}
+
+
+/* ------- NOUVEAUTÉS SECTION ------- */
+
+.news-section {
+  padding: 80px 0 120px;
+  color: #fff;
+}
+
+.news-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* rows */
+.news-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.news-col {
+  flex: 1;
+}
+
+/* TAKE-IT + BUNA text wrappers (line + text) */
+.news-text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.news-line {
+  width: 26px;
+  height: 200px;
+  object-fit: cover;
+  order: -1; /* line before text */
+}
+
+.news-text {
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.news-item-title {
+  font-size: 2rem;
+}
+
+.news-item-description {
+  font-size: 1.6rem;
+}
+
+/* image cards */
+.news-col-image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.news-image-card {
+  border-radius: 24px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 430px;
+}
+
+.news-image-card img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
+/* BUNA layout */
+
+.buna-row {
+  align-items: center;
+}
+
+.buna-main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* badge inside text, aligned to the right of the text block */
+.buna-offer {
+  width: 190px;
+  align-self: flex-end;
+}
+
+.buna-text-wrapper {
+    padding-left: 11rem;
+  }
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+  /* stack news rows */
+  .news-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .news-col-image {
+    justify-content: center;
+  }
+
+  .buna-main {
+    flex-direction: column; /* stack image and text vertically on mobile */
+    align-items: center;
+  }
+
+  .buna-offer-col {
+    justify-content: center;
+  }
+
+  /* hide vertical lines on mobile */
+  .news-line {
+    display: none;
+  }
+
+  .gold-line {
+    display: none;
+  }
+
+  .buna-text-wrapper {
+    padding-left: 0;
   }
 }

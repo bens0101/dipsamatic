@@ -12,6 +12,11 @@ import goldLineFull from "../assets/GoldLine_Full.png";
 import paroleImg from "../assets/Paroledentreprise_Img.png";
 import italyFlag from "../assets/ItalienFlag.png";
 
+/* Nouveautés images */
+import takeItImg from "../assets/Take-it.png";
+import offerImg from "../assets/Offer.png";
+import bunaImg from "../assets/Buna.png";
+
 function Home() {
   return (
     <div className="home-page">
@@ -111,7 +116,7 @@ function Home() {
 
           {/* ================= PRODUITS / ITALIE ================= */}
           <div className="products-block">
-            {/* LEFT: text + gold line (line is now grouped with text) */}
+            {/* LEFT: line + text */}
             <div className="products-text-wrapper">
               <img
                 src={goldLineFull}
@@ -133,6 +138,85 @@ function Home() {
             {/* RIGHT: Italy flag only */}
             <div className="products-flag-wrapper">
               <img src={italyFlag} className="italy-flag" alt="Italie" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ================= NOUVEAUTÉS SECTION ================= */}
+      <section className="news-section">
+        <div className="news-inner">
+          {/* reuse same title wrapper + gold lines */}
+          <div className="title-wrapper">
+            <img src={goldLineLeft} className="gold-line left" alt="" />
+            <h2 className="expertise-title">Nouveautés</h2>
+            <img src={goldLineRight} className="gold-line right" alt="" />
+          </div>
+
+          {/* TAKE-IT ROW */}
+          <div className="news-row">
+            {/* text left with gold line (like Produits Naturel) */}
+            <div className="news-col news-col-text">
+              <div className="news-text-wrapper">
+                <img
+                  src={goldLineFull}
+                  className="news-line"
+                  alt=""
+                  aria-hidden="true"
+                />
+
+                <div className="news-text">
+                  <h3 className="news-item-title">TAKE-IT</h3>
+                  <p className="news-item-description">
+                    Dipsamatic a mis en place une solution qui permet aux
+                    consommateurs de régler leurs achats via leur téléphone
+                    grâce à un compte personnel, utilisable sur l’ensemble du
+                    parc de machines.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* image right */}
+            <div className="news-col news-col-image">
+              <div className="news-image-card">
+                <img src={takeItImg} alt="Application Take-it" />
+              </div>
+            </div>
+          </div>
+
+          {/* BUNA ROW */}
+          <div className="news-row buna-row">
+            {/* LEFT: image + gold line + text stacked, all aligned left */}
+            <div className="news-col buna-main">
+              <div className="news-image-card">
+                <img src={bunaImg} alt="Café Buna" />
+              </div>
+
+              {/* gold line + text, same structure as TAKE-IT */}
+              <div className="news-text-wrapper buna-text-wrapper">
+                <img
+                  src={goldLineFull}
+                  className="news-line"
+                  alt=""
+                  aria-hidden="true"
+                />
+
+                <div className="news-text">
+                  <h3 className="news-item-title">BUNA</h3>
+                  <p className="news-item-description">
+                    Dipsamatic propose le café Buna, une sélection d’exception
+                    torréfiée naturellement en Italie à Modena. Chaque tasse
+                    incarne qualité, authenticité et plaisir, alliant
+                    savoir-faire artisanal et dégustation raffinée.
+                  </p>
+                  <img
+                    src={offerImg}
+                    className="buna-offer"
+                    alt="18,90€ par Kg — livraison offerte à partir de ..."
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
