@@ -5,9 +5,9 @@ import icon1 from "../assets/homeicon_1.png";
 import icon2 from "../assets/homeicon_2.png";
 import icon3 from "../assets/homeicon_3.png";
 
-import goldLineLeft from "../assets/goldLine_LEFT.png";
-import goldLineRight from "../assets/goldLine_RIGHT.png";
-import goldLineFull from "../assets/GoldLine_Full.png";
+import goldLineLeft from "../assets/goldLine_L.png";
+import goldLineRight from "../assets/goldLine_R.png";
+import goldLineFull from "../assets/GoldLine_F.png";
 
 import paroleImg from "../assets/Paroledentreprise_Img.png";
 import italyFlag from "../assets/ItalienFlag.png";
