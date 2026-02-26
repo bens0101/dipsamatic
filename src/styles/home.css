@@ -646,4 +646,8 @@
   .buna-text-wrapper {
     padding-left: 0;
   }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
 }

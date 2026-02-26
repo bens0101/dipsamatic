@@ -1,0 +1,251 @@
+/* ==========================
+   GLOBAL PAGE
+   ========================== */
+
+.activity-page {
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ==========================
+   HERO (same style as RSE)
+   ========================== */
+
+.activity-hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url("../assets/homeherobanner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* dark overlay */
+.activity-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 11, 11, 0.4);
+  z-index: 1;
+}
+
+/* fade at bottom (no hard line) */
+.activity-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 200px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.8) 80%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: 2;
+}
+
+.activity-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  padding: 0 40px;
+  text-align: center;
+  padding-bottom: 10rem;
+}
+
+.activity-logo {
+  width: 50rem;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.activity-hero-subtitle {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+/* ==========================
+   EXPERTISE SECTION
+   ========================== */
+
+.activity-expertise {
+  padding: 80px 0 120px;
+  color: #fff;
+}
+
+.activity-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* title + gold lines (re-use style from home / rse) */
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.activity-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.gold-line {
+  width: 200px;
+  height: auto;
+}
+
+/* 2×2 grid of cards */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px 40px;
+}
+
+/* each card: number | line | content(text+image) */
+.activity-card {
+  border-radius: 24px;
+  border: 1px solid var(--gold);
+  padding: 32px 28px;
+  display: flex;
+  align-items: stretch;
+  background: transparent;
+}
+
+.activity-card-number {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--gold);
+  display: flex;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+/* vertical gold line */
+.activity-card-line {
+  width: 26px;
+  object-fit: cover;
+  margin-right: 24px;
+}
+
+/* main block: text + image */
+.activity-card-main {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.activity-card-text {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-card-text h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.activity-card-text p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.activity-card-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.activity-card-image img {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================
+   RESPONSIVE
+   ========================== */
+
+@media (max-width: 900px) {
+  .activity-hero {
+    height: 60vh;
+  }
+
+  .activity-logo {
+    width: 50rem;
+  }
+
+  .activity-hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .activity-inner {
+    padding: 0 24px;
+  }
+
+  .activity-section-title {
+    font-size: 2rem;
+  }
+
+  .gold-line {
+    width: 140px;
+  }
+
+  .activity-grid {
+    grid-template-columns: 1fr; /* stack cards on tablet/mobile */
+  }
+
+  .activity-card-main {
+    flex-direction: column;
+  }
+
+  .activity-card-image {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .activity-hero {
+    height: 55vh;
+  }
+
+  .activity-hero-content {
+    padding: 0 16px;
+  }
+
+  .activity-logo {
+    width: 50rem;
+  }
+
+  .activity-inner {
+    padding: 0 16px;
+  }
+
+  .gold-line {
+    width: 110px;
+  }
+
+  .activity-card-image img {
+    max-width: 150px;
+  }
+}
