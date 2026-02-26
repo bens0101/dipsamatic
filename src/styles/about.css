@@ -1,0 +1,231 @@
+/* ==========================
+   GLOBAL ABOUT PAGE
+   ========================== */
+
+.about-page {
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ==========================
+   HERO (same look as RSE)
+   ========================== */
+
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url("../assets/homeherobanner.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* dark overlay */
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 11, 11, 0.4);
+  z-index: 1;
+}
+
+/* fade into black at bottom (same as Home & RSE) */
+.about-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 200px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.8) 80%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  z-index: 2;
+}
+
+/* text content */
+.about-hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  padding: 0 40px;
+  text-align: center;
+  padding-bottom: 10rem;
+}
+
+/* logo used as title */
+.about-logo {
+  width: 25rem;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* subtitle */
+.about-hero-subtitle {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  opacity: 0.92;
+}
+
+/* ==========================
+   NOS ÉQUIPES SECTION
+   ========================== */
+
+.about-team {
+  padding: 80px 0 120px;
+  color: #fff;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* reuse same title-wrapper / gold-line as RSE & Home */
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.about-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.gold-line {
+  width: 200px;
+  height: auto;
+}
+
+/* team cards layout */
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+
+/* single card */
+.team-card {
+  border: 1px solid var(--gold);
+  border-radius: 24px;
+  padding: 32px 24px 28px;
+  text-align: center;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* top yellow icon */
+.team-icon {
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.team-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* title */
+.team-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* photo */
+.team-photo-wrapper {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.team-photo {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* description */
+.team-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ==========================
+   RESPONSIVE
+   ========================== */
+
+@media (max-width: 900px) {
+  .about-hero {
+    height: 60vh;
+  }
+
+  .about-logo {
+    width: 20rem;
+  }
+
+  .about-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .about-inner {
+    padding: 0 24px;
+  }
+
+  .about-section-title {
+    font-size: 2rem;
+  }
+
+  .gold-line {
+    width: 140px;
+  }
+
+  .team-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    height: 55vh;
+  }
+
+  .about-hero-content {
+    padding: 0 16px;
+  }
+
+  .about-inner {
+    padding: 0 16px;
+  }
+
+  .gold-line {
+    width: 110px;
+  }
+
+  .team-cards {
+    grid-template-columns: 1fr;
+  }
+}
