@@ -70,7 +70,7 @@ function Home() {
               <div className="feature-icon feature-icon_3">
                 <img src={icon3} alt="Qualité" />
               </div>
-              <h3 className="feature-title">2500+</h3>
+              <h3 className="feature-title">1600+</h3>
               <p className="feature-description">machines installées</p>
             </div>
           </div>
