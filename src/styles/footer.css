@@ -111,6 +111,16 @@
   margin-top: 2px;
 }
 
+.footer-email-link {
+  color: #fff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-email-link:hover {
+  opacity: 0.8;
+}
+
 /* Divider line */
 .footer-divider {
   max-width: 1000px;

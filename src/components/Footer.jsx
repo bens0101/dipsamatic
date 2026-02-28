@@ -48,7 +48,16 @@ function Footer() {
             </div>
             <div className="footer-item">
               <img src={smsIcon} alt="Email" className="footer-icon-" />
-              <p>s.elpitiyia@dipsamatic.fr</p>
+              <a 
+                href="mailto:s.elpitiyia@dipsamatic.fr" 
+                className="footer-email-link"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default mail client behavior
+                  window.location.href = 'mailto:s.elpitiyia@dipsamatic.fr';
+                }}
+              >
+                s.elpitiyia@dipsamatic.fr
+              </a>
             </div>
             <div className="footer-item">
               <img src={mapMarkerIcon} alt="Adresse" className="footer-icon" />
