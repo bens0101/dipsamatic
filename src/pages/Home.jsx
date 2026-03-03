@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React from "react";
 import "../styles/home.css";
 
@@ -29,18 +28,20 @@ function Home() {
         <Reveal animation="fade-up">
           <div className="hero-content">
             <h1 className="hero-title">
-              Améliorer les pauses au travail grâce à des solutions café et
-              snacking sur mesure.
+              Améliorer les pauses au travail
+              <br />
+              grâce à des solutions café et snacking sur mesure.
             </h1>
 
             <p className="hero-subtitle">
               Nous accompagnons les entreprises dans la création d’espaces de
               pause performants et conviviaux grâce à des solutions café et
-              snacking sur mesure. De l’installation des équipements à leur
-              gestion quotidienne, nous sélectionnons des produits de qualité et
-              assurons un service fiable et réactif pour offrir à vos
-              collaborateurs et visiteurs une expérience de pause agréable,
-              moderne et sans contrainte.
+              snacking sur mesure.
+              <br />
+              De l’installation des équipements à leur gestion quotidienne, nous
+              sélectionnons des produits de qualité et assurons un service
+              fiable et réactif pour offrir à vos collaborateurs et visiteurs
+              une expérience de pause agréable, moderne et sans contrainte.
             </p>
           </div>
         </Reveal>
@@ -113,7 +114,8 @@ function Home() {
                 <div className="expertise-text">
                   <h3 className="expertise-subtitle">
                     <span className="quote-icon">“</span>
-                    Parole d’entreprise - 28 juin 2025
+                    Parole d'entreprise - 28 juin 2025
+                    <span className="quote-icon">”</span>
                   </h3>
 
                   <p className="expertise-description">

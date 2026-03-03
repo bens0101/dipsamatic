@@ -71,9 +71,11 @@
 
 /* subtitle */
 .about-hero-subtitle {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   line-height: 1.7;
   opacity: 0.92;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* ==========================
@@ -150,7 +152,7 @@
 
 /* title */
 .team-title {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 

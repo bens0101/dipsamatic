@@ -151,7 +151,7 @@
 }
 
 .activity-card-text {
-  flex: 2;
+  flex: 2.5;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -180,6 +180,13 @@
   width: 100%;
   height: auto;
   display: block;
+}
+
+.activity-card-text h3 {
+  /* your styles here */
+  font-size: 1.2rem;
+  max-width: 100%;
+  width: 100%;
 }
 
 /* ==========================
@@ -249,3 +256,5 @@
     max-width: 150px;
   }
 }
+
+

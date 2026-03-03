@@ -95,7 +95,7 @@
 
 .contact-grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
 }
@@ -109,6 +109,7 @@
   max-width: 350px;
   padding: 0 30px;
   position: relative;
+  padding-left: 4rem;
 }
 
 /* vertical separator lines like the design */
