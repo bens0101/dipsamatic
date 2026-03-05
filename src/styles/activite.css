@@ -184,9 +184,10 @@
 
 .activity-card-text h3 {
   /* your styles here */
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   max-width: 100%;
   width: 100%;
+  font-weight: bolder;
 }
 
 /* ==========================

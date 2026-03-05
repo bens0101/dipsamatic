@@ -48,7 +48,7 @@ function Contact() {
                   alt="Adresse"
                 />
                 <div className="contact-details">
-                  <h3>Adresse de notre siège</h3>
+                  <h3>Adresse du siège </h3>
                   <p>
                     123 Avenue des Champs-Élysées
                     <br />
