@@ -22,7 +22,15 @@ function Footer() {
             Solutions café &amp; snacking sur mesure pour les entreprises.
           </p>
 
-          <button className="footer-cta">Demander un devis</button>
+          <button 
+            className="footer-cta"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = 'mailto:s.elpitiyia@dipsamatic.fr?subject=Demande de devis';
+            }}
+          >
+            Demander un devis
+          </button>
         </div>
 
         {/* RIGHT – navigation + contact grouped */}

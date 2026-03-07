@@ -39,7 +39,15 @@ export default function Navbar() {
         </ul>
 
         {/* Desktop CTA */}
-        <button className="cta">Demander un devis</button>
+        <button 
+          className="cta"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = 'mailto:s.elpitiyia@dipsamatic.fr?subject=Demande de devis';
+          }}
+        >
+          Demander un devis
+        </button>
 
         {/* Hamburger (mobile) */}
         <div
@@ -94,7 +102,15 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <button className="cta mobile-btn">Demander un devis</button>
+        <button 
+          className="cta mobile-btn"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = 'mailto:s.elpitiyia@dipsamatic.fr?subject=Demande de devis';
+          }}
+        >
+          Demander un devis
+        </button>
       </div>
     </nav>
   );
