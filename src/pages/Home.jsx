@@ -37,8 +37,7 @@ function Home() {
               snacking sur mesure. De l’installation des équipements à leur gestion quotidienne, nous
               sélectionnons des produits de qualité et assurons un service
               fiable et réactif pour offrir à vos collaborateurs et visiteurs
-              une expérience de pause agréable, moderne et sans contrainte.
-              
+              une expérience de pause agréable, moderne et sans contrainte.         
             </p>
           </div>
         </Reveal>
@@ -123,7 +122,18 @@ function Home() {
                     solidité de Dipsamatic sur son marché.
                   </p>
 
-                  <button className="video-btn">Voir la video</button>
+                  <button 
+                    className="video-btn"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.open(
+                        'https://www.bfmtv.com/economie/replay-emissions/l-hebdo-des-pme/video-sam-elpitiya-dipsamatic-dipsamatic-la-distribution-automatique-28-06_VN-202506280380.html',
+                        '_blank'
+                      );
+                    }}
+                  >
+                    Voir la video
+                  </button>
                 </div>
               </div>
             </div>
