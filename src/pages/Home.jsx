@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/home.css";
+import { useNavigate } from "react-router-dom";
 
 import icon1 from "../assets/homeicon_1.png";
 import icon2 from "../assets/homeicon_2.png";
@@ -21,6 +22,12 @@ import bunaImg from "../assets/Buna.png";
 import Reveal from "../components/Reveal";
 
 function Home() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="home-page">
       {/* ================= HERO ================= */}
@@ -47,12 +54,22 @@ function Home() {
       <div className="features-wrapper">
         <Reveal animation="fade-up">
           <div className="features">
-            <div className="feature-card glass">
+            <div 
+              className="feature-card glass clickable-card"
+              onClick={() => navigate('/about')}
+              role="button"
+              tabIndex={0}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  navigate('/about');
+                }
+              }}
+            >
               <div className="feature-icon feature-icon_1">
                 <img src={icon1} alt="Expertise" />
               </div>
               <h3 className="feature-title">23+</h3>
-              <p className="feature-description">ans d’expérience</p>
+              <p className="feature-description">ans d'expérience</p>
             </div>
 
             <div className="feature-card glass">
@@ -63,7 +80,17 @@ function Home() {
               <p className="feature-description">entreprises accompagnées</p>
             </div>
 
-            <div className="feature-card glass">
+            <div 
+              className="feature-card glass clickable-card"
+              onClick={() => navigate('/activite')}
+              role="button"
+              tabIndex={0}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  navigate('/activite');
+                }
+              }}
+            >
               <div className="feature-icon feature-icon_3">
                 <img src={icon3} alt="Qualité" />
               </div>
@@ -237,7 +264,7 @@ function Home() {
                   <div className="news-text">
                     <h3 className="news-item-title">BUNA</h3>
                     <p className="news-item-description">
-                      Dipsamatic propose le café Buna, une sélection d’exception
+                      Diplomatic propose son propre café “Buna”, une sélection d’exception
                       torréfiée naturellement en Italie à Modena. Chaque tasse
                       incarne qualité, authenticité et plaisir, alliant
                       savoir-faire artisanal et dégustation raffinée.

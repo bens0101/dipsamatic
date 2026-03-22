@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/rse.css";
 
 import rseLogo from "../assets/RSE_LOGO.png";
@@ -10,6 +10,10 @@ import rseEU from "../assets/RSEEU.png";
 import Reveal from "../components/Reveal";
 
 function RSE() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="rse-page">
       {/* ================= RSE HERO (IMAGE BACKGROUND) ================= */}

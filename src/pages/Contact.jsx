@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/contact.css";
 
 import contactBanner from "../assets/contactbanner.png";
@@ -11,6 +11,10 @@ import smsIcon from "../assets/sms.png";
 import Reveal from "../components/Reveal";
 
 function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="contact-page">
       {/* ================= BANNER SECTION ================= */}
@@ -50,9 +54,9 @@ function Contact() {
                 <div className="contact-details">
                   <h3>Adresse du siège </h3>
                   <p>
-                    123 Avenue des Champs-Élysées
+                    27 av. Graham Bell
                     <br />
-                    75008 Paris, France
+                    77600 Bussy-Saint-Georges
                   </p>
                 </div>
               </div>
@@ -65,7 +69,7 @@ function Contact() {
                 />
                 <div className="contact-details">
                   <h3>Téléphone</h3>
-                  <p>+33 1 23 45 67 89</p>
+                  <p>01 64 12 46 75</p>
                 </div>
               </div>
 

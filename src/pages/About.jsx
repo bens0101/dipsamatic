@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/about.css";
 
 import quiLogo from "../assets/quiLOGO.png";
@@ -20,6 +20,10 @@ import quiIcon4 from "../assets/quiIcon4.png";
 import Reveal from "../components/Reveal";
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="about-page">
       {/* ================ HERO (same style as RSE) ================ */}

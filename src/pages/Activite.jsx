@@ -1,5 +1,5 @@
 // src/pages/Activite.jsx
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/activite.css";
 
 import activiteLogo from "../assets/activiteLOGO.png";
@@ -16,6 +16,10 @@ import activite4 from "../assets/activite4.png";
 import Reveal from "../components/Reveal";
 
 function Activite() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="activity-page">
       {/* =============== HERO (same style as RSE) =============== */}
