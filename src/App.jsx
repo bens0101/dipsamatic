@@ -8,6 +8,7 @@ import Activite from "./pages/Activite";
 import RSE from "./pages/RSE";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Companies from "./pages/Companies";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/rse" element={<RSE />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/companies" element={<Companies />} />
         </Routes>
       </div>
 

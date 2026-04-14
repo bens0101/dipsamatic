@@ -72,7 +72,17 @@ function Home() {
               <p className="feature-description">ans d'expérience</p>
             </div>
 
-            <div className="feature-card glass">
+            <div 
+              className="feature-card glass clickable-card"
+              onClick={() => navigate('/companies')}
+              role="button"
+              tabIndex={0}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  navigate('/companies');
+                }
+              }}
+            >
               <div className="feature-icon feature-icon_2">
                 <img src={icon2} alt="Innovation" />
               </div>
