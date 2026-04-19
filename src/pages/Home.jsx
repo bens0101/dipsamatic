@@ -274,7 +274,7 @@ function Home() {
                   <div className="news-text">
                     <h3 className="news-item-title">BUNA</h3>
                     <p className="news-item-description">
-                      Diplomatic propose son propre café “Buna”, une sélection d’exception
+                      Dipsamatic propose son propre café “Buna”, une sélection d’exception
                       torréfiée naturellement en Italie à Modena. Chaque tasse
                       incarne qualité, authenticité et plaisir, alliant
                       savoir-faire artisanal et dégustation raffinée.
