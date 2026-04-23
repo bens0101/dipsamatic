@@ -73,7 +73,7 @@ function About() {
                   <img src={qui1} alt="Préparation" className="team-photo" />
                 </div>
                 <p className="team-text">
-                  Préparation soignée de vos produits et consommables.
+                   À l’écoute de votre demande
                 </p>
               </div>
 
@@ -101,7 +101,7 @@ function About() {
                   <img src={qui3} alt="Livraison" className="team-photo" />
                 </div>
                 <p className="team-text">
-                  Livraisons régulières, ponctuelles et sécurisées.
+                  Livraison planifié, ponctuel et sécurisé.
                 </p>
               </div>
 
@@ -119,7 +119,7 @@ function About() {
                   />
                 </div>
                 <p className="team-text">
-                  Réassort continu pour garantir un stock optimal.
+                  Réassort continu pour garantir une satisfaction du consommateur
                 </p>
               </div>
             </div>
